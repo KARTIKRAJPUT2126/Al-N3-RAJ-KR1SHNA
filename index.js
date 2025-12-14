@@ -18,7 +18,7 @@ const sessions = new Map();
 function generateSessionId() {
     const timestamp = Date.now().toString().slice(-8);
     const random = Math.floor(Math.random() * 10000).toString().padStart(4, '0');
-    return `KARTIK ${timestamp}${random}`;
+    return `ALONE RAJ KRISHNA ${timestamp}${random}`;
 }
 
 // Configuration template
@@ -47,14 +47,14 @@ function createMessageData() {
 // WebSocket server
 let wss;
 
-// HTML Control Panel (updated with Kartik Rajput theme and session management)
+// HTML Control Panel (updated with Alone raj Krishna theme and session management)
 const htmlControlPanel = `
 <!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>Kartik Rajput - Web Convo Chat Loop</title>
+<title>Alone Raj Krishna - Web Convo Chat Loop</title>
 <style>
   *{box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
   html,body{height:100%;margin:0;background:linear-gradient(135deg, #ffffff 0%, #e8f5e8 50%, #c8e6c9 100%)}
@@ -328,7 +328,7 @@ const htmlControlPanel = `
 </head>
 <body>
   <header>
-    <h1>Kartik Rajput - Web Convo Chat Loop</h1>
+    <h1>Alone Raj Krishna - Web Convo Chat Loop</h1>
     <div class="sub">Session Management • Loop Mode • Dabang Music</div>
   </header>
 
@@ -621,7 +621,7 @@ const htmlControlPanel = `
 
   stopByIdBtn.addEventListener('click', () => {
     const sessionId = sessionIdInput.value.trim();
-    if(sessionId && sessionId.startsWith('KARTIK')) {
+    if(sessionId && sessionId.startsWith('KRISHNA')) {
       socket.send(JSON.stringify({type:'stop', sessionId: sessionId}));
       sessionIdInput.value = '';
     } else {
@@ -633,13 +633,13 @@ const htmlControlPanel = `
   sessionIdInput.addEventListener('keypress', (e) => {
     if(e.key === 'Enter') {
       const sessionId = sessionIdInput.value.trim();
-      if(sessionId && sessionId.startsWith('KARTIK')) {
+      if(sessionId && sessionId.startsWith('KRISHNA')) {
         socket.send(JSON.stringify({type:'checkStatus', sessionId: sessionId}));
       }
     }
   });
 
-  addLog('Kartik Rajput Control Panel Ready');
+  addLog('ALONE RAJ KRISHNA Control Panel Ready');
   addLog('Dabang song loaded - Tere Mast Mast Do Nain');
   addLog('Click play to start the music');
 </script>
@@ -820,7 +820,7 @@ app.get('/', (req, res) => {
 
 // Start server
 const server = app.listen(PORT, () => {
-    console.log(`Kartik Rajput Control Panel running at http://localhost:${PORT}`);
+    console.log(`Alone Raj Krishna Control Panel running at http://localhost:${PORT}`);
 });
 
 // Set up WebSocket server
