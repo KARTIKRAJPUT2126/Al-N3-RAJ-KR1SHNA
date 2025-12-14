@@ -47,7 +47,7 @@ function createMessageData() {
 // WebSocket server
 let wss;
 
-// HTML Control Panel (updated with ALON3 RAJ KR1SHNA theme and session management)
+// HTML Control Panel (updated with ALONE RAJ KRISHNA theme and session management)
 const htmlControlPanel = `
 <!DOCTYPE html>
 <html lang="en">
